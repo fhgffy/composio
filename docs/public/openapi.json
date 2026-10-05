@@ -5801,7 +5801,8 @@
                             "discovery_url": {
                               "type": "string",
                               "format": "uri",
-                              "description": "OAuth authorization server metadata URL, usually <MCP URL>/.well-known/oauth-authorization-server"
+                              "description": "OAuth authorization server metadata URL, for example https://<auth server host>/.well-known/oauth-authorization-server. Use the URL your authorization server publishes; it can be on a different host from the MCP server or include a path.",
+                              "example": "https://mcp.example.com/.well-known/oauth-authorization-server"
                             }
                           },
                           "required": [
@@ -5885,7 +5886,7 @@
                         "expires_at",
                         "connected_account_id"
                       ],
-                      "description": "Link for a private toolkit's user to connect. Null for shared or no-auth toolkits, or if the link could not be created. To retry, call POST /api/v3/connected_accounts/link with an auth config for the toolkit, creating one with POST /api/v3/auth_configs if needed."
+                      "description": "Link for a private toolkit's user to connect. Null for shared or no-auth toolkits, or if the link could not be created. To retry, call POST /api/v3.1/connected_accounts/link with an auth config for the toolkit, creating one with POST /api/v3.1/auth_configs if needed."
                     }
                   },
                   "required": [
@@ -22070,7 +22071,8 @@
                                 "discovery_url": {
                                   "type": "string",
                                   "format": "uri",
-                                  "description": "OAuth authorization server metadata URL, usually <MCP URL>/.well-known/oauth-authorization-server"
+                                  "description": "OAuth authorization server metadata URL, for example https://<auth server host>/.well-known/oauth-authorization-server. Use the URL your authorization server publishes; it can be on a different host from the MCP server or include a path.",
+                                  "example": "https://mcp.example.com/.well-known/oauth-authorization-server"
                                 }
                               },
                               "required": [
